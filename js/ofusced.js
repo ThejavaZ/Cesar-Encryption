@@ -1,197 +1,96 @@
-function _0x1ca8(_0x19a6b4, _0x137338) {
-  _0x19a6b4 = _0x19a6b4 - 0x1f3;
-  const _0x10e630 = _0x10e6();
-  let _0x1ca883 = _0x10e630[_0x19a6b4];
-  return _0x1ca883;
-}
-(function (_0x30fc4c, _0x367d44) {
-  const _0x11699e = _0x1ca8,
-    _0x2a1fce = _0x30fc4c();
-  while (!![]) {
-    try {
-      const _0x34d44c =
-        -parseInt(_0x11699e(0x211)) / 0x1 +
-        -parseInt(_0x11699e(0x216)) / 0x2 +
-        (parseInt(_0x11699e(0x202)) / 0x3) *
-          (-parseInt(_0x11699e(0x200)) / 0x4) +
-        (-parseInt(_0x11699e(0x1f6)) / 0x5) *
-          (parseInt(_0x11699e(0x21d)) / 0x6) +
-        -parseInt(_0x11699e(0x20e)) / 0x7 +
-        -parseInt(_0x11699e(0x20d)) / 0x8 +
-        (parseInt(_0x11699e(0x213)) / 0x9) * (parseInt(_0x11699e(0x1f7)) / 0xa);
-      if (_0x34d44c === _0x367d44) break;
-      else _0x2a1fce["push"](_0x2a1fce["shift"]());
-    } catch (_0x314c4b) {
-      _0x2a1fce["push"](_0x2a1fce["shift"]());
+const $ = document;
+
+const loadSelects = () => {
+  const selects = $.getElementsByTagName("select");
+  for (let i = 0; i < selects.length; i++) {
+    for (let j = 0; j < 25; j++) {
+      const option = $.createElement("option");
+      option.value = j;
+      option.textContent = j;
+      selects[i].appendChild(option);
     }
   }
-})(_0x10e6, 0x37f4a);
-const $ = document,
-  loadSelects = () => {
-    const _0x137cfb = _0x1ca8,
-      _0x2da849 = $[_0x137cfb(0x201)](_0x137cfb(0x1fc));
-    for (
-      let _0x621be3 = 0x0;
-      _0x621be3 < _0x2da849[_0x137cfb(0x215)];
-      _0x621be3++
-    ) {
-      for (let _0x2b4e4a = 0x0; _0x2b4e4a < 0x19; _0x2b4e4a++) {
-        const _0x4de31f = $["createElement"](_0x137cfb(0x1ff));
-        (_0x4de31f[_0x137cfb(0x20f)] = _0x2b4e4a),
-          (_0x4de31f["textContent"] = _0x2b4e4a),
-          _0x2da849[_0x621be3]["appendChild"](_0x4de31f);
-      }
-    }
-  },
-  convertMayus = (_0x1166b3) => {
-    const _0x14be3b = _0x1ca8;
-    _0x1166b3["value"] = _0x1166b3["value"][_0x14be3b(0x212)]();
-  },
-  contentValidate = (_0xfae160) => {
-    const _0x5beb9a = _0x1ca8,
-      _0x56d5dd = _0xfae160[_0x5beb9a(0x20b)] || _0xfae160[_0x5beb9a(0x21c)],
-      _0x1497a1 = String["fromCharCode"](_0x56d5dd);
-    !/[A-Z]/[_0x5beb9a(0x219)](_0x1497a1) &&
-      _0x56d5dd !== 0x20 &&
-      _0x56d5dd !== 0xd &&
-      _0x56d5dd !== 0x8 &&
-      _0xfae160[_0x5beb9a(0x21e)]();
-  },
-  encrypt = () => {
-    const _0x4be17d = _0x1ca8,
-      _0xed3ab = $["querySelector"](_0x4be17d(0x1fe))["value"];
-    let _0x386173 = "",
-      _0x3f8436 = 0x1;
-    for (
-      let _0x258039 = 0x0;
-      _0x258039 < _0xed3ab[_0x4be17d(0x215)];
-      _0x258039++
-    ) {
-      if (
-        _0xed3ab["charCodeAt"](_0x258039) !== 0x20 &&
-        _0xed3ab[_0x4be17d(0x208)](_0x258039) !== 0xd
-      ) {
-        const _0x5a512e = _0xed3ab[_0x4be17d(0x208)](_0x258039);
-        let _0x3e58db = parseInt(
-          $[_0x4be17d(0x203)](_0x4be17d(0x1f4) + _0x3f8436++)[_0x4be17d(0x20f)]
-        );
-        if (_0x5a512e + _0x3e58db > 0x5a)
-          _0x386173 += String[_0x4be17d(0x1f3)](_0x5a512e + _0x3e58db - 0x1a);
-        else _0x386173 += String[_0x4be17d(0x1f3)](_0x5a512e + _0x3e58db);
-        if (_0x3f8436 === 0x7) _0x3f8436 = 0x1;
-      } else
-        _0x386173 += String[_0x4be17d(0x1f3)](
-          _0xed3ab[_0x4be17d(0x208)](_0x258039)
-        );
-    }
-    $[_0x4be17d(0x203)](_0x4be17d(0x1f8))["value"] = _0x386173;
-  },
-  example = () => {
-    const _0x14a4f7 = _0x1ca8;
-    ($[_0x14a4f7(0x203)](_0x14a4f7(0x1fe))["value"] =
-      _0x14a4f7(0x1fb)[_0x14a4f7(0x212)]()),
-      ($[_0x14a4f7(0x204)](_0x14a4f7(0x206))[_0x14a4f7(0x20f)] = "1"),
-      ($[_0x14a4f7(0x204)](_0x14a4f7(0x21b))[_0x14a4f7(0x20f)] = "2"),
-      ($[_0x14a4f7(0x204)](_0x14a4f7(0x20a))[_0x14a4f7(0x20f)] = "3"),
-      ($[_0x14a4f7(0x204)](_0x14a4f7(0x207))[_0x14a4f7(0x20f)] = "4"),
-      ($[_0x14a4f7(0x204)](_0x14a4f7(0x1f9))["value"] = "5"),
-      ($["getElementById"]("key6")[_0x14a4f7(0x20f)] = "6");
-  },
-  saveEncryption = () => {
-    const _0x697860 = _0x1ca8,
-      _0x4e4560 = $[_0x697860(0x203)](_0x697860(0x1f8))[_0x697860(0x20f)],
-      _0x360058 = _0x697860(0x21f),
-      _0x543c74 = new Blob([_0x4e4560], { type: "text/plain" }),
-      _0x2e4538 = URL[_0x697860(0x214)](_0x543c74),
-      _0x31e534 = $[_0x697860(0x205)]("a");
-    (_0x31e534[_0x697860(0x220)] = _0x2e4538),
-      (_0x31e534[_0x697860(0x1fd)] = _0x360058),
-      $[_0x697860(0x218)][_0x697860(0x209)](_0x31e534),
-      _0x31e534[_0x697860(0x222)](),
-      $[_0x697860(0x218)][_0x697860(0x210)](_0x31e534),
-      URL["revokeObjectURL"](_0x2e4538);
-  },
-  saveKeys = () => {
-    const _0x1aed06 = _0x1ca8,
-      _0x1a9dd4 =
-        $[_0x1aed06(0x203)](_0x1aed06(0x221))[_0x1aed06(0x20f)] +
-        "\x0a" +
-        $["querySelector"](_0x1aed06(0x20c))[_0x1aed06(0x20f)] +
-        "\x0a" +
-        $[_0x1aed06(0x203)]("#key3")[_0x1aed06(0x20f)] +
-        "\x0a" +
-        $[_0x1aed06(0x203)](_0x1aed06(0x217))[_0x1aed06(0x20f)] +
-        "\x0a" +
-        $[_0x1aed06(0x203)]("#key4")[_0x1aed06(0x20f)] +
-        "\x0a" +
-        $["querySelector"](_0x1aed06(0x21a))[_0x1aed06(0x20f)] +
-        "\x0a" +
-        $[_0x1aed06(0x203)]("#key6")["value"],
-      _0x2736fd = _0x1a9dd4,
-      _0x2068d0 = _0x1aed06(0x1f5),
-      _0x220e32 = new Blob([_0x2736fd], { type: _0x1aed06(0x1fa) }),
-      _0x158d83 = URL[_0x1aed06(0x214)](_0x220e32),
-      _0x3ec99b = $[_0x1aed06(0x205)]("a");
-    (_0x3ec99b[_0x1aed06(0x220)] = _0x158d83),
-      (_0x3ec99b["download"] = _0x2068d0),
-      $[_0x1aed06(0x218)][_0x1aed06(0x209)](_0x3ec99b),
-      _0x3ec99b[_0x1aed06(0x222)](),
-      $[_0x1aed06(0x218)][_0x1aed06(0x210)](_0x3ec99b),
-      URL["revokeObjectURL"](_0x158d83);
-  };
-function _0x10e6() {
-  const _0x15b6ab = [
-    "#txtEncripted",
-    "key5",
-    "text/plain",
-    "hola\x20mundo,\x20como\x20estamos?",
-    "select",
-    "download",
-    "#txtMessage",
-    "option",
-    "20tIOFwR",
-    "getElementsByTagName",
-    "244707nABJMc",
-    "querySelector",
-    "getElementById",
-    "createElement",
-    "key1",
-    "key4",
-    "charCodeAt",
-    "appendChild",
-    "key3",
-    "keyCode",
-    "#key2",
-    "1567680qHprZW",
-    "994091RTPkjO",
-    "value",
-    "removeChild",
-    "112529ZwWZFe",
-    "toUpperCase",
-    "27RMIUPH",
-    "createObjectURL",
-    "length",
-    "455696GQeBWB",
-    "#key4",
-    "body",
-    "test",
-    "#key5",
-    "key2",
-    "which",
-    "666ePFMgD",
-    "preventDefault",
-    "mensaje_encriptado.txt",
-    "href",
-    "#key1",
-    "click",
-    "fromCharCode",
-    "#key",
-    "keys.txt",
-    "14635MngPcI",
-    "5467620hCSFej",
-  ];
-  _0x10e6 = function () {
-    return _0x15b6ab;
-  };
-  return _0x10e6();
-}
+};
+
+const convertMayus = (textarea) => {
+  textarea.value = textarea.value.toUpperCase();
+};
+
+const contentValidate = (event) => {
+  const keyCode = event.keyCode || event.which;
+  const key = String.fromCharCode(keyCode);
+  if (!/[A-Z]/.test(key) && keyCode !== 32 && keyCode !== 13 && keyCode !== 8) {
+    event.preventDefault();
+  }
+};
+
+const encrypt = () => {
+  const message = $.querySelector("#txtMessage").value;
+  let exit = "";
+  let k = 1;
+  for (let i = 0; i < message.length; i++) {
+    if (message.charCodeAt(i) !== 32 && message.charCodeAt(i) !== 13) {
+      const letter = message.charCodeAt(i);
+      let movement = parseInt($.querySelector(`#key${k++}`).value);
+      if (letter + movement > 90)
+        exit += String.fromCharCode(letter + movement - 26);
+      else exit += String.fromCharCode(letter + movement);
+
+      if (k === 7) k = 1;
+    } else exit += String.fromCharCode(message.charCodeAt(i));
+  }
+  $.querySelector("#txtEncripted").value = exit;
+};
+
+const example = () => {
+  $.querySelector("#txtMessage").value =
+    "hola mundo, como estamos?".toUpperCase();
+
+  $.getElementById("key1").value = "1";
+  $.getElementById("key2").value = "2";
+  $.getElementById("key3").value = "3";
+  $.getElementById("key4").value = "4";
+  $.getElementById("key5").value = "5";
+  $.getElementById("key6").value = "6";
+};
+
+const saveEncryption = () => {
+  const textarea = $.querySelector("#txtEncripted").value;
+  const fileName = "mensaje_encriptado.txt";
+
+  const blob = new Blob([textarea], { type: "text/plain" });
+  const url = URL.createObjectURL(blob);
+  const a = $.createElement("a");
+  a.href = url;
+  a.download = fileName;
+  $.body.appendChild(a);
+  a.click();
+  $.body.removeChild(a);
+  URL.revokeObjectURL(url);
+};
+
+const saveKeys = () => {
+  const keys = `${$.querySelector("#key1").value}\n${
+    $.querySelector("#key2").value
+  }\n${$.querySelector("#key3").value}\n${$.querySelector("#key4").value}\n${
+    $.querySelector("#key4").value
+  }\n${$.querySelector("#key5").value}\n${$.querySelector("#key6").value}`;
+
+  const textToSave = keys;
+  const file = "keys.txt";
+
+  const blob = new Blob([textToSave], { type: "text/plain" });
+
+  const url = URL.createObjectURL(blob);
+
+  const a = $.createElement("a");
+  a.href = url;
+  a.download = file;
+
+  $.body.appendChild(a);
+
+  a.click();
+
+  $.body.removeChild(a);
+  URL.revokeObjectURL(url);
+};
