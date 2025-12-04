@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Encriptado de cesar</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body onload="loadSelects()">
+    <header><h1>Encriptado de cesar</h1></header>
+    <main>
+      <div class="message-area">
+        <label for="">Mensaje</label>
+        <textarea
+          id="txtMessage"
+          placeholder="introduzca su mensaje"
+          rows="20"
+          onkeyup="convertMayus(this)"
+          onkeydown="contentValidate(event)"
+        ></textarea>
+      </div>
+      <div class="cmbs-container">
+        <select id="key1"></select>
+        <select id="key2"></select>
+        <select id="key3"></select>
+        <select id="key4"></select>
+        <select id="key5"></select>
+        <select id="key6"></select>
+      </div>
+      <div class="btns-container">
+        <input type="button" value="Ejemplo" onclick="example()" />
+        <input type="button" value="Encriptar" onclick="encrypt()" />
+        <input type="button" value="Guardar" onclick="saveEncryption()" />
+        <input type="button" value="Guardar llaves" onclick="saveKeys()" />
+      </div>
+      <div class="encripted-area">
+        <label for="">Mensaje Encriptado</label>
+        <textarea
+          rows="20"
+          id="txtEncripted"
+          placeholder="Mensaje encriptado"
+          disabled
+        ></textarea>
+      </div>
+    </main>
+    <footer>
+      <p>JavierSG</p>
+      <ul>
+        <li><a href="">Email</a></li>
+        <li><a href="">Github</a></li>
+        <li><a href="">Twitter</a></li>
+        <li><a href="">Linkedlin</a></li>
+      </ul>
+    </footer>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
